@@ -1,3 +1,4 @@
+//server/hono.ts
 import { OpenAPIHono } from "@hono/zod-openapi";
 import {
   createBlogRoute,
@@ -16,7 +17,7 @@ const blogApp = new OpenAPIHono()
   .openapi(getBlogByIdRoute, getBlogByIdHandler)
   .openapi(createBlogRoute, createBlogHandler)
 
-const route = app.route("/blogs", blogApp);
+const route = app.route("/blogs", blogApp);   // eslint-disable-line
 
 app.doc("/specification", {
   openapi: "3.0.0",
