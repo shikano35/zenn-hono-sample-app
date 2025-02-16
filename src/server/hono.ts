@@ -24,6 +24,5 @@ app.doc("/specification", {
   info: { title: "honote API", version: "1.0.0" },
 }).get("/doc", swaggerUI({ url: "/api/specification" }));
 
-//routeを型としてexportしておく
 export type AppType = typeof route;
 export default app;
