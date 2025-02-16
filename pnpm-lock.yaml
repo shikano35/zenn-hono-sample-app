@@ -11,9 +11,18 @@ importers:
       '@auth/prisma-adapter':
         specifier: ^2.7.4
         version: 2.7.4(@prisma/client@6.3.1(prisma@6.3.1(typescript@5.7.3))(typescript@5.7.3))
+      '@hono/swagger-ui':
+        specifier: ^0.5.0
+        version: 0.5.0(hono@4.7.1)
+      '@hono/zod-openapi':
+        specifier: ^0.18.4
+        version: 0.18.4(hono@4.7.1)(zod@3.24.2)
       '@prisma/client':
         specifier: 6.3.1
         version: 6.3.1(prisma@6.3.1(typescript@5.7.3))(typescript@5.7.3)
+      hono:
+        specifier: ^4.7.1
+        version: 4.7.1
       next:
         specifier: 15.1.7
         version: 15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -63,6 +72,11 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@asteasolutions/zod-to-openapi@7.3.0':
+    resolution: {integrity: sha512-7tE/r1gXwMIvGnXVUdIqUhCU1RevEFC4Jk6Bussa0fk1ecbnnINkZzj1EOAJyE/M3AI25DnHT/zKQL1/FPFi8Q==}
+    peerDependencies:
+      zod: ^3.20.2
 
   '@auth/core@0.37.2':
     resolution: {integrity: sha512-kUvzyvkcd6h1vpeMAojK2y7+PAV5H+0Cc9+ZlKYDFhDY31AlvsB+GW5vNO4qE3Y07KeQgvNO9U0QUx/fN62kBw==}
@@ -137,6 +151,24 @@ packages:
   '@eslint/plugin-kit@0.2.5':
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@hono/swagger-ui@0.5.0':
+    resolution: {integrity: sha512-MWYYSv9kC8IwFBLZdwgZZMT9zUq2C/4/ekuyEYOkHEgUMqu+FG3eebtBZ4ofMh60xYRxRR2BgQGoNIILys/PFg==}
+    peerDependencies:
+      hono: '*'
+
+  '@hono/zod-openapi@0.18.4':
+    resolution: {integrity: sha512-6NHMHU96Hh32B1yDhb94Z4Z5/POsmEu2AXpWLWcBq9arskRnOMt2752yEoXoADV8WUAc7H1IkNaQHGj1ytXbYw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      hono: '>=4.3.6'
+      zod: 3.*
+
+  '@hono/zod-validator@0.4.3':
+    resolution: {integrity: sha512-xIgMYXDyJ4Hj6ekm9T9Y27s080Nl9NXHcJkOvkXPhubOLj8hZkOL8pDnnXfvCf5xEE8Q4oMFenQUZZREUY2gqQ==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1028,6 +1060,10 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
+  hono@4.7.1:
+    resolution: {integrity: sha512-V3eWoPkBxoNgFCkSc5Y5rpLF6YoQQx1pkYO4qrF6YfOw8RZbujUNlJLZCxh0z9gZct70+je2Ih7Zrdpv21hP9w==}
+    engines: {node: '>=16.9.0'}
+
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
@@ -1352,6 +1388,9 @@ packages:
   object.values@1.2.1:
     resolution: {integrity: sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==}
     engines: {node: '>= 0.4'}
+
+  openapi3-ts@4.4.0:
+    resolution: {integrity: sha512-9asTNB9IkKEzWMcHmVZE7Ts3kC9G7AFHfs8i7caD8HbI76gEjdkId4z/AkP83xdZsH7PLAnnbl47qZkXuxpArw==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -1826,9 +1865,17 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@asteasolutions/zod-to-openapi@7.3.0(zod@3.24.2)':
+    dependencies:
+      openapi3-ts: 4.4.0
+      zod: 3.24.2
 
   '@auth/core@0.37.2':
     dependencies:
@@ -1907,6 +1954,22 @@ snapshots:
     dependencies:
       '@eslint/core': 0.10.0
       levn: 0.4.1
+
+  '@hono/swagger-ui@0.5.0(hono@4.7.1)':
+    dependencies:
+      hono: 4.7.1
+
+  '@hono/zod-openapi@0.18.4(hono@4.7.1)(zod@3.24.2)':
+    dependencies:
+      '@asteasolutions/zod-to-openapi': 7.3.0(zod@3.24.2)
+      '@hono/zod-validator': 0.4.3(hono@4.7.1)(zod@3.24.2)
+      hono: 4.7.1
+      zod: 3.24.2
+
+  '@hono/zod-validator@0.4.3(hono@4.7.1)(zod@3.24.2)':
+    dependencies:
+      hono: 4.7.1
+      zod: 3.24.2
 
   '@humanfs/core@0.19.1': {}
 
@@ -2934,6 +2997,8 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
+  hono@4.7.1: {}
+
   ignore@5.3.2: {}
 
   import-fresh@3.3.1:
@@ -3254,6 +3319,10 @@ snapshots:
       call-bound: 1.0.3
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
+
+  openapi3-ts@4.4.0:
+    dependencies:
+      yaml: 2.7.0
 
   optionator@0.9.4:
     dependencies:
@@ -3835,3 +3904,5 @@ snapshots:
   yaml@2.7.0: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.2: {}
