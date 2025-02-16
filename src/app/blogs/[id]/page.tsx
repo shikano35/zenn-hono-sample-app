@@ -3,13 +3,16 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
-  params: { id: string };
-};
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  // params は Promise<{ id: string }> として受け取るため await で解決
+  const { id } = await params;
 
-export default async function Page({ params }: Props) {
   const res = await hono.api.blogs[":id"].$get({
-    param: { id: params.id },
+    param: { id },
   });
 
   const blog = await res.json();
@@ -26,8 +29,12 @@ export default async function Page({ params }: Props) {
       </Link>
 
       <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-4">
-        <h1 className="lg:text-xl text-lg font-bold text-gray-800 mb-4">{blog.title}</h1>
-        <p className="text-gray-600 lg:text-md text-sm mb-6">{blog.content}</p>
+        <h1 className="lg:text-xl text-lg font-bold text-gray-800 mb-4">
+          {blog.title}
+        </h1>
+        <p className="text-gray-600 lg:text-md text-sm mb-6">
+          {blog.content}
+        </p>
 
         <div className="flex items-center justify-between text-gray-600 text-sm">
           <div className="flex items-center space-x-3">
