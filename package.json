@@ -12,12 +12,14 @@
     "@auth/prisma-adapter": "^2.7.4",
     "@hono/swagger-ui": "^0.5.0",
     "@hono/zod-openapi": "^0.18.4",
+    "@hookform/resolvers": "^4.1.0",
     "@prisma/client": "6.3.1",
     "hono": "^4.7.1",
     "next": "15.1.7",
     "next-auth": "5.0.0-beta.25",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
